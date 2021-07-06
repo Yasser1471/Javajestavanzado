@@ -9,4 +9,12 @@ describe('Probando promesas', () => {
             done();
         });
     });
+
+    test('Resuelve un Hola', () => {
+        return expect(Promise.resolve('Hola!')).resolves.toBe('Hola!');
+    });
+
+    test('Rechazar con un error', () => {
+        return expect(Promise.resolve('Error')).rejects.toBe('Error');
+    });
 });
