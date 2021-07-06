@@ -6,11 +6,15 @@ describe('Comparadores comunes', () => {
         lastname: "Martinez"
     }
     const user2 = {
-        name: "Omar",
-        lastname: "Martinez"
+        name: "Omar2",
+        lastname: "Martinez2"
     }
 
     test('igualdad de elementos', () => {
         expect(user).toEqual(user2);
+    })
+
+    test('No son exactamente iguales', () => {
+        expect(user).not.toEqual(user2);
     })
 })
